@@ -1,13 +1,15 @@
 package com.mycompany.escolamusica;
 
-public abstract class Instrumento {
-    protected String nome;
-    protected String material;
+public class Escolamusica {
+    public static void main(String[] args) {
+        Instrumento violao = new Violao("Violão Clássico", "Madeira", 6);
+        Instrumento saxofone = new Saxofone("Yamaha", "Latão", "Alto");
+        Instrumento piano = new piano("Piano de Cauda", "Madeira", 88);
+        Instrumento bateria = new bateria("Bateria Rock", "Madeira e Metal", 5);
 
-    public Instrumento(String nome, String material) {
-        this.nome = nome;
-        this.material = material;
+        violao.tocar();
+        saxofone.tocar();
+        piano.tocar();
+        bateria.tocar();
     }
-
-    public abstract void tocar();
 }
